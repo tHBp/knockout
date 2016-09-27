@@ -9,11 +9,6 @@ ko.utils = (function () {
 
     function extend(target, source) {
         if (source) {
-            for(var prop in source) {
-                if(source.hasOwnProperty(prop)) {
-                    target[prop] = source[prop];
-                }
-            }
             var descriptors = Object.keys(source).reduce(function(descriptors, key) {
                 descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
                 return descriptors;
